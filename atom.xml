@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XwXStudio - A Backup of Life</title>
+  
+  <subtitle>A Backup of Life</subtitle>
+  <link href="http://www.xwxstudio.com/atom.xml" rel="self"/>
+  
+  <link href="http://www.xwxstudio.com/"/>
+  <updated>2022-04-07T02:16:54.217Z</updated>
+  <id>http://www.xwxstudio.com/</id>
+  
+  <author>
+    <name>XwX</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用VLC实现同子网下的从Win到Android的视频分享及播放</title>
+    <link href="http://www.xwxstudio.com/2022/04/07/VLC/"/>
+    <id>http://www.xwxstudio.com/2022/04/07/VLC/</id>
+    <published>2022-04-07T02:12:00.000Z</published>
+    <updated>2022-04-07T02:16:54.217Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h1><p>最近厌烦了在阿B上看番的各种圣光和介质问题，进而转向下载补番党。但是，在电脑上下载完了之后，不能好好地躺在床上看，不然就要忍受现在电脑对手机的缓慢传输速度，或者是网盘的不可靠性。对于我这种<code>好事者</code>来说实在是难以忍受，因为宿舍里有路由器和校园网进线，所以我就想到了能不能用网络共享这种有点老的东西来实现，后来就想到了<code>SMB</code>，就有了这篇分享。</p><h1 id="电脑分享"><a href="#电脑分享" class="headerlink" title="电脑分享"></a>电脑分享</h1><p>如果是<code>Windows</code>的话，在<code>文件资源管理器</code>中找到你想要分享的文件夹按照<code>属性-共享-网络文件和文件夹共享-共享...</code>的方式打开共享设置界面，确认除了<code>Administrator</code>之外还有你自己的账号（一般是自己的微软账号），点击共享，就设置完毕了。</p><h1 id="手机看视频"><a href="#手机看视频" class="headerlink" title="手机看视频"></a>手机看视频</h1><ol><li>在<code>Google play</code>里面下载<code>VLC</code></li><li><code>VLC</code>中<code>浏览</code>界面下，一般过一会儿就探测到<code>共享</code>出现在<code>本地网络</code>里面了，可以加收藏</li><li>如果没有及时出现，可以尝试添加<ol><li>选择<code>SMB</code>协议</li><li><code>IP</code>在电脑<code>网络与Internet设置</code>中可以查看，路由器使用的网段一般是<code>192.168.x.x</code></li></ol></li></ol><h2 id="字幕"><a href="#字幕" class="headerlink" title="字幕"></a>字幕</h2><p>可以在播放界面找到字幕和音频的快速设置，所以即使是外挂字幕也可以用这个方法快乐共享。</p><h1 id="此外"><a href="#此外" class="headerlink" title="此外"></a>此外</h1><p><code>VLC</code>还可以看IP电视，这里分享一个仓库<a href="https://github.com/iptv-org/iptv">IPTV</a>，同时也可以直接<a href="https://github.com/search?q=iptv">GitHub搜索IPTV</a>。获得<code>m3u</code>和<code>m3u8</code>格式之后，使用任意平台的<code>VLC</code>或者<code>PotPlayer</code>均可以播放。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://www.xwxstudio.com/categories/life/"/>
+    
+    <category term="video" scheme="http://www.xwxstudio.com/categories/life/video/"/>
+    
+    
+    <category term="VLC" scheme="http://www.xwxstudio.com/tags/VLC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3·21</title>
+    <link href="http://www.xwxstudio.com/2022/03/27/3-21/"/>
+    <id>http://www.xwxstudio.com/2022/03/27/3-21/</id>
+    <published>2022-03-27T05:53:14.000Z</published>
+    <updated>2022-04-05T04:51:57.855Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><br><br></p><body>    <h1 align="center"><font size="7">逝者以矣,生者如斯</font></h1>    </body>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Kindle配合Calibre的简单使用</title>
+    <link href="http://www.xwxstudio.com/2022/02/25/kindle/"/>
+    <id>http://www.xwxstudio.com/2022/02/25/kindle/</id>
+    <published>2022-02-25T15:58:50.000Z</published>
+    <updated>2022-03-22T03:00:22.556Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Calibre安装"><a href="#Calibre安装" class="headerlink" title="Calibre安装"></a>Calibre安装</h1><p>官网脚本自动安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -v &amp;&amp; wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin</span><br></pre></td></tr></table></figure><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>接着上<a href="https://github.com/apprenticeharper/DeDRM_tools">GitHub</a>下载<code>DeDRM_plugin</code>，否则没法导出<code>kindle</code>商店买的电子书。</p><blockquote><p>此时记得先解压一次。</p></blockquote><p>在<code>Calibre</code>中，后面操作如下<code>首选项&gt;插件&gt;从文件加载插件</code>,选中<code>DeDRM_plugin.zip</code>,随后重启<code>Calibre</code>即可。</p><h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>接着需要将<code>Kindle</code>序列号输入插件的设置中,在<code>首选项&gt;插件</code>界面下,选择<code>自定义该插件</code>,选择<code>eInk Kindle ebooks</code>,按下”+”号,输入序列号（不需要空格）。</p><p>其中<code>Kindle序列号</code>在<code>设置&gt;设备信息</code>界面中可以找到。</p><h1 id="Kindle"><a href="#Kindle" class="headerlink" title="Kindle"></a>Kindle</h1><blockquote><p>版本为 Kindle Paperwhite（第十代）</p></blockquote><h1 id="从Kindle商店购买并加工为无加密的文件"><a href="#从Kindle商店购买并加工为无加密的文件" class="headerlink" title="从Kindle商店购买并加工为无加密的文件"></a>从Kindle商店购买并加工为无加密的文件</h1><p>搜索引擎搜索<code>Kindle商店</code>，在我的账户下拉菜单里找到<code>管理我的内容与设备</code>，在此页面可以下载加密后的文件。<br>下面看到<code>Calibre</code>，将文件添加书籍后，进行转换书籍至需要的格式，DeDRM便会自动运行，得到非加密的文件。</p><blockquote><p>当然你也可以在类似<a href="https://zh.z-lib.org/">z-library</a>之类的找到想要的文档。</p></blockquote><h1 id="网络电子书传进Kindle"><a href="#网络电子书传进Kindle" class="headerlink" title="网络电子书传进Kindle"></a>网络电子书传进Kindle</h1><p>添加书籍，传输进去即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://www.xwxstudio.com/categories/life/"/>
+    
+    <category term="read" scheme="http://www.xwxstudio.com/categories/life/read/"/>
+    
+    
+    <category term="Kindle" scheme="http://www.xwxstudio.com/tags/Kindle/"/>
+    
+    <category term="电纸书" scheme="http://www.xwxstudio.com/tags/%E7%94%B5%E7%BA%B8%E4%B9%A6/"/>
+    
+    <category term="阅读" scheme="http://www.xwxstudio.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git初学笔记</title>
+    <link href="http://www.xwxstudio.com/2022/02/09/Git/"/>
+    <id>http://www.xwxstudio.com/2022/02/09/Git/</id>
+    <published>2022-02-09T13:37:07.000Z</published>
+    <updated>2022-03-22T03:00:22.552Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>由于我用的是manjaro，所以就直接<code>yay</code>了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -Sy git</span><br></pre></td></tr></table></figure><p><a href="http://git-scm.com/downloads">其他系统下载</a></p><blockquote><p>如果是<code>Win</code>系统可以安装后右键打开<code>Git GUI</code>（</p></blockquote><h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><ul><li>首先是报上名来。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;whoami&quot;</span></span><br><span class="line">git config --global user.email myemail@example.com</span><br></pre></td></tr></table></figure><p>如果不放心是否成功可以查一下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure><ul><li>接着就初始化本地仓库</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add --all</span><br><span class="line">git commit -m <span class="string">&#x27;init&#x27;</span></span><br></pre></td></tr></table></figure><ul><li>然后是加公钥</li></ul><p>先是自己机子生成一下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;myemail@example.com&quot;</span></span><br></pre></td></tr></table></figure><p>现在<code>～/.ssh/id_rsa.pub</code>里面已经出现了公钥，全部复制即可。</p><p>再是加入到Github上的设置里</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">个人主页&gt;头像右边的小三角&gt;Settings&gt;SSH and GPG keys&gt;New ssh key</span><br></pre></td></tr></table></figure><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><ol><li>添加远程仓库</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:username/repo.git</span><br></pre></td></tr></table></figure><ol start="2"><li>克隆仓库</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:username/repo.git</span><br></pre></td></tr></table></figure><ol start="3"><li>从远程仓库获取分支</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br></pre></td></tr></table></figure><ol start="4"><li>合并分支</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge origin/master</span><br></pre></td></tr></table></figure><ol start="5"><li>下载远程代码并合并</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;(:&lt;本地分支名&gt;)</span><br></pre></td></tr></table></figure><ol start="6"><li>上传本地代码并合并</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;(:&lt;远程分支名&gt;)</span><br></pre></td></tr></table></figure><ol start="7"><li>分支管理</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VSCode</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="tech" scheme="http://www.xwxstudio.com/categories/tech/"/>
+    
+    
+    <category term="Git" scheme="http://www.xwxstudio.com/tags/Git/"/>
+    
+    <category term="Github" scheme="http://www.xwxstudio.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft服务器(ListAndBak)</title>
+    <link href="http://www.xwxstudio.com/2022/02/02/MC/"/>
+    <id>http://www.xwxstudio.com/2022/02/02/MC/</id>
+    <published>2022-02-02T01:54:20.000Z</published>
+    <updated>2022-03-26T06:30:23.673Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="minecraft-1-18-1-Fabric"><a href="#minecraft-1-18-1-Fabric" class="headerlink" title="minecraft 1.18.1 Fabric"></a>minecraft 1.18.1 Fabric</h1><blockquote><p><em>已停运!</em></p></blockquote><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 查看人数js --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">目前在线玩家： <span class="tag">&lt;<span class="name">span</span> <span class="attr">data-playercounter-ip</span>=<span class="string">&quot;x.x.x.x&quot;</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span>  人。 </span><br><span class="line"></span><br></pre></td></tr></table></figure><blockquote><p>服务器备份在<a href="https://github.com/XwX12596/Fabric118">Github</a></p></blockquote><h4 id="模组列表："><a href="#模组列表：" class="headerlink" title="模组列表："></a>模组列表：</h4><ul><li><strong>phosphor(可选)</strong></li><li><strong>lithium(可选)</strong></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Games" scheme="http://www.xwxstudio.com/tags/Games/"/>
+    
+    <category term="Minecraft" scheme="http://www.xwxstudio.com/tags/Minecraft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录利用docker开设Hexo框架简单博客</title>
+    <link href="http://www.xwxstudio.com/2022/02/01/Hexo/"/>
+    <id>http://www.xwxstudio.com/2022/02/01/Hexo/</id>
+    <published>2022-02-01T14:00:00.000Z</published>
+    <updated>2022-03-27T05:51:46.174Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h2><ul><li>系统：<strong>Ubuntu</strong></li><li>使用域名：<strong><a href="http://www.xwxstudio.com/">www.xwxstudio.com</a></strong></li></ul><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><h3 id="从NodeSource安装"><a href="#从NodeSource安装" class="headerlink" title="从NodeSource安装"></a>从<a href="https://github.com/nodesource/distributions#debinstall">NodeSource</a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure><p>或者<code>yay -Sy nodejs</code></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="官方文档的npm安装。"><a href="#官方文档的npm安装。" class="headerlink" title="官方文档的npm安装。"></a>官方文档的npm安装。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</span><br></pre></td></tr></table></figure><p>或者<code>yay -Sy npm</code></p><h3 id="在Node背景下的Hexo安装。"><a href="#在Node背景下的Hexo安装。" class="headerlink" title="在Node背景下的Hexo安装。"></a>在Node背景下的Hexo安装。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line"><span class="comment">#初始化文件夹</span></span><br><span class="line">hexo init .</span><br><span class="line">npm install</span><br><span class="line"><span class="comment">#在4000端口开放服务</span></span><br><span class="line">hexo server</span><br><span class="line"><span class="comment">#指定端口使用参数 -p</span></span><br></pre></td></tr></table></figure><h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><h3 id="使用官方安装脚本自动安装。"><a href="#使用官方安装脚本自动安装。" class="headerlink" title="使用官方安装脚本自动安装。"></a>使用官方安装脚本自动安装。</h3><p>从阿里云用<strong>cURL</strong>安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure><p>关于<strong>docker-compose</strong>的安装可以参考<a href="https://www.runoob.com/docker/docker-compose.html">菜鸟教程</a>。</p><p>或者<code>yay -Sy docker docker-compose</code></p><h1 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a>Hexo配置</h1><h2 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure><blockquote><p><code>_config.yml</code>：<code>Hexo</code>的配置文件<br><code>themes</code>：放主题文件的文件夹<br><code>source/_drafts</code>：放草稿的文件夹<br><code>source/_posts</code>：放帖子的文件夹</p></blockquote><h2 id="基本信息配置"><a href="#基本信息配置" class="headerlink" title="基本信息配置"></a>基本信息配置</h2><p>详见<a href="https://hexo.io/zh-cn/docs/configuration">Hexo配置</a></p><h1 id="Docker配置"><a href="#Docker配置" class="headerlink" title="Docker配置"></a>Docker配置</h1><h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><h3 id="hexo镜像"><a href="#hexo镜像" class="headerlink" title="hexo镜像"></a>hexo镜像</h3><ul><li>仅仅作Hexo模板的初始化</li></ul><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> XwX</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /hexo</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> npm install hexo-cli -g\</span></span><br><span class="line"><span class="language-bash">&amp;&amp; hexo init .\</span></span><br><span class="line"><span class="language-bash">&amp;&amp; npm install</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">4000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;/bin/bash&quot;</span>]</span></span><br></pre></td></tr></table></figure><ul><li>运行<code>docker build -t &#39;hexo&#39; .</code></li></ul><h3 id="blog镜像"><a href="#blog镜像" class="headerlink" title="blog镜像"></a>blog镜像</h3><ul><li>生成具体博客镜像</li></ul><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> hexo:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> name &lt;mail&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /hexo</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">4000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;/usr/bin/env&quot;</span>,<span class="string">&quot;hexo&quot;</span>,<span class="string">&quot;server&quot;</span>]</span></span><br></pre></td></tr></table></figure><ul><li>运行<code>docker build -t  &#39;blog&#39;  . </code></li></ul><h2 id="docker-compose-yml"><a href="#docker-compose-yml" class="headerlink" title="docker-compose.yml"></a>docker-compose.yml</h2><ul><li>在具体文件夹创建容器</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">blog:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">build:</span></span><br><span class="line">      <span class="attr">context:</span> <span class="string">.</span></span><br><span class="line">      <span class="attr">dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&#x27;blog&#x27;</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hexo-blog</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;80:4000&quot;</span></span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">$HOME/.ssh:/root/.ssh</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">.:/hexo</span></span><br></pre></td></tr></table></figure><ul><li><p>开启容器：<code>docker-compose up -d</code></p></li><li><p>关闭容器：<code>docker-compose down</code></p></li></ul><h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><ul><li>直接对宿主机文件进行操作即可实现hexo博客的创建，配置与写作。已停运!</li></ul><h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><ul><li>直接使用<code>Git</code>对本地和云端的数据进行版本管理。</li><li>可以使用<code>VScode</code>进行<code>Git</code>的pull和push操作。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="tech" scheme="http://www.xwxstudio.com/categories/tech/"/>
+    
+    
+    <category term="Hexo" scheme="http://www.xwxstudio.com/tags/Hexo/"/>
+    
+    <category term="Docker" scheme="http://www.xwxstudio.com/tags/Docker/"/>
+    
+    <category term="Blog" scheme="http://www.xwxstudio.com/tags/Blog/"/>
+    
+  </entry>
+  
+</feed>
