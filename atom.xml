@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XwXStudio</title>
+  
+  
+  <link href="http://xwxstudio.com/atom.xml" rel="self"/>
+  
+  <link href="http://xwxstudio.com/"/>
+  <updated>2023-06-27T11:12:57.401Z</updated>
+  <id>http://xwxstudio.com/</id>
+  
+  <author>
+    <name>XwX</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>看V的人是这样的</title>
+    <link href="http://xwxstudio.com/liver/"/>
+    <id>http://xwxstudio.com/liver/</id>
+    <published>2023-06-14T16:27:31.000Z</published>
+    <updated>2023-06-27T11:12:57.401Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="如题"><a href="#如题" class="headerlink" title="如题"></a>如题</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">liverc=<span class="string">&quot;&quot;</span><span class="variable">$HOME</span><span class="string">&quot;/.liverc&quot;</span></span><br><span class="line">url=<span class="string">&#x27;https://api.live.bilibili.com/room/v1/Room/get_status_info_by_uids&#x27;</span></span><br><span class="line">greeting=<span class="string">&#x27;GET DA⭐ZE&#x27;</span></span><br><span class="line"><span class="built_in">bye</span>=<span class="string">&#x27;Enjoy Yourself!!&#x27;</span></span><br><span class="line">sorry=<span class="string">&#x27;DAMEDAYO!&#x27;</span></span><br><span class="line">tip=<span class="string">&#x27;Press Enter To Exit...&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> IFS=<span class="string">&#x27; &#x27;</span> <span class="built_in">read</span> name ID; <span class="keyword">do</span></span><br><span class="line">        table+=([<span class="string">&quot;<span class="variable">$ID</span>&quot;</span>]=<span class="string">&quot;<span class="variable">$name</span>&quot;</span>)</span><br><span class="line"><span class="keyword">done</span> &lt; <span class="string">&quot;<span class="variable">$liverc</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;Requesting...&quot;</span></span><br><span class="line">respond=$(curl -s \</span><br><span class="line">        <span class="string">&#x27;https://api.live.bilibili.com/room/v1/Room/get_status_info_by_uids&#x27;</span> \</span><br><span class="line">        -H <span class="string">&#x27;Content-Type: application/json&#x27;</span> \</span><br><span class="line">        -d <span class="string">&#x27;&#123;&quot;uids&quot;: [&#x27;</span>$(IFS=,; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;!table[*]&#125;</span>&quot;</span>)<span class="string">&#x27;]&#125;&#x27;</span>)</span><br><span class="line">IDs=($(<span class="built_in">echo</span> <span class="variable">$respond</span> | jq <span class="string">&#x27;.[&quot;data&quot;]| &#x27;</span>keys<span class="string">&#x27;&#x27;</span> | sed -e <span class="string">&#x27;s/&quot;//g&#x27;</span> -e <span class="string">&#x27;s/,/ /g&#x27;</span> -e <span class="string">&#x27;s/\[//g&#x27;</span> -e <span class="string">&#x27;s/\]//g&#x27;</span>))</span><br><span class="line"><span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;<span class="variable">$greeting</span>&quot;</span></span><br><span class="line"></span><br><span class="line">count=1</span><br><span class="line"><span class="keyword">for</span> ID <span class="keyword">in</span> <span class="variable">$&#123;IDs[@]&#125;</span> ; <span class="keyword">do</span></span><br><span class="line">        result=$(<span class="built_in">echo</span> <span class="variable">$respond</span> | jq <span class="string">&#x27;.[&quot;data&quot;] | .[&quot;&#x27;</span><span class="variable">$&#123;ID&#125;</span><span class="string">&#x27;&quot;] | [.live_status, .title, .live_time, .room_id, .short_id]&#x27;</span>)</span><br><span class="line">        title=$(<span class="built_in">echo</span> <span class="variable">$result</span> | sed -e <span class="string">&#x27;s/.*&quot;\(.*\)&quot;.*/\1/&#x27;</span> -e <span class="string">&#x27;s/&quot;//g&#x27;</span> -e <span class="string">&#x27;s/&quot;//g&#x27;</span> -e <span class="string">&#x27;s/【/「/g&#x27;</span> -e <span class="string">&#x27;s/】/」/g&#x27;</span>)</span><br><span class="line">        result=$(<span class="built_in">echo</span> <span class="variable">$result</span> | sed -e <span class="string">&#x27;s/&quot;.*&quot;, //g&#x27;</span> -e <span class="string">&#x27;s/, / /g&#x27;</span> -e <span class="string">&quot;s/\[//g&quot;</span> -e <span class="string">&#x27;s/\]//g&#x27;</span>)</span><br><span class="line">        IFS=<span class="string">&#x27; &#x27;</span> <span class="built_in">read</span> live_status live_time room_id short_id&lt;&lt;&lt; <span class="variable">$result</span></span><br><span class="line">        <span class="keyword">if</span> [[ <span class="variable">$&#123;live_status&#125;</span> == 1 ]]; <span class="keyword">then</span></span><br><span class="line">                <span class="keyword">if</span> [[ <span class="variable">$&#123;short_id&#125;</span> !=  0 ]]; <span class="keyword">then</span></span><br><span class="line">                        room_id=<span class="variable">$&#123;short_id&#125;</span></span><br><span class="line">                <span class="keyword">fi</span></span><br><span class="line">                live_time=$(<span class="built_in">date</span> -d @<span class="variable">$live_time</span> +<span class="string">&quot;%H:%M:%S&quot;</span>)</span><br><span class="line">                buffer+=<span class="string">&#x27;printf &quot;%d\t%s\t\e[90m%s\e[0m\t\e[32m%s\e[0m\t%s\n&quot; &quot;&#x27;</span><span class="variable">$count</span><span class="string">&#x27;&quot; &quot;&#x27;</span><span class="variable">$&#123;table[&quot;<span class="variable">$&#123;ID&#125;</span>&quot;]&#125;</span><span class="string">&#x27;&quot; &quot;&#x27;</span><span class="variable">$&#123;title&#125;</span><span class="string">&#x27;&quot; &quot;&#x27;</span><span class="variable">$&#123;live_time&#125;</span><span class="string">&#x27;&quot; &quot;&#x27;</span><span class="variable">$&#123;room_id&#125;</span><span class="string">&#x27;&quot;;&#x27;</span></span><br><span class="line">                room_ids+=(<span class="variable">$room_id</span>)</span><br><span class="line">                count=$((<span class="variable">$&#123;count&#125;</span>+<span class="number">1</span>))</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ <span class="variable">$buffer</span> != <span class="string">&#x27;&#x27;</span> ]]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">        buffer=<span class="string">&#x27;printf &quot;\e[34mNO\tNickname\tTitle\tStart\tRoom_ID\n\e[0m&quot;;&#x27;</span><span class="variable">$buffer</span></span><br><span class="line">        <span class="built_in">eval</span> <span class="string">&quot;<span class="variable">$buffer</span>&quot;</span> | column -t -s $<span class="string">&#x27;\t&#x27;</span></span><br><span class="line">        <span class="keyword">if</span> [[ <span class="variable">$&#123;#room_ids[@]&#125;</span> != 0 ]]; <span class="keyword">then</span></span><br><span class="line">                <span class="built_in">let</span> total=<span class="variable">$&#123;#room_ids[@]&#125;</span>-1</span><br><span class="line">                <span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;choose...&quot;</span></span><br><span class="line">                <span class="built_in">read</span> -a choices</span><br><span class="line">                <span class="keyword">if</span> [[ $(<span class="built_in">echo</span> <span class="variable">$choices</span> | grep -E <span class="string">&#x27;a|A&#x27;</span>) != <span class="string">&#x27;&#x27;</span> ]]; <span class="keyword">then</span></span><br><span class="line">                        choices=($(<span class="built_in">seq</span> -s <span class="string">&#x27; &#x27;</span> 0 <span class="variable">$total</span>))</span><br><span class="line">                <span class="keyword">fi</span></span><br><span class="line">                <span class="keyword">for</span> choice <span class="keyword">in</span> <span class="variable">$&#123;choices[@]&#125;</span>; <span class="keyword">do</span></span><br><span class="line">                        <span class="built_in">let</span> choice=$((<span class="variable">$choice</span> - <span class="number">1</span>))</span><br><span class="line">                        <span class="keyword">if</span> [[ <span class="variable">$choice</span> -lt $((<span class="variable">$&#123;#room_ids[@]&#125;</span> + <span class="number">1</span>)) ]]; <span class="keyword">then</span></span><br><span class="line">                                <span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;bili-live <span class="variable">$&#123;room_ids[$(($choice))]&#125;</span>&quot;</span></span><br><span class="line">                                bili-live <span class="variable">$&#123;room_ids[$(($choice))]&#125;</span> &amp;</span><br><span class="line">                        <span class="keyword">fi</span></span><br><span class="line">                <span class="keyword">done</span></span><br><span class="line">        <span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;<span class="variable">$bye</span>&quot;</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;<span class="variable">$sorry</span>&quot;</span></span><br><span class="line">        <span class="built_in">printf</span> <span class="string">&quot;\e[35m%s\e[0m\n&quot;</span> <span class="string">&quot;<span class="variable">$tip</span>&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">read</span></span><br></pre></td></tr></table></figure><blockquote><p>~&#x2F;.liverc实例如下</p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">泠鸢yousa 282994</span><br><span class="line">hanser 11073</span><br><span class="line">小缘 5055</span><br><span class="line">ninnikuu 11431931</span><br><span class="line">纱依shayi 3461576189282324</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>FFmpeg 笔记</title>
+    <link href="http://xwxstudio.com/FFmpeg/"/>
+    <id>http://xwxstudio.com/FFmpeg/</id>
+    <published>2023-05-28T15:53:24.000Z</published>
+    <updated>2023-05-28T16:01:32.060Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><code>-i</code> 指定输入文件</li><li><code>-y</code> 忽略警告(覆盖已有文件)</li><li><code>-hwaccel cuda</code> 硬件加速</li><li><code>-b:v</code> 视频码率, 音频改为<code>-b:a</code>即可 </li><li><code>-r</code> fps</li><li><code>-vf scale=1080:-1</code> 保持原始比例缩放, 或者直接<code>-s</code></li><li><code>-vf subtitle</code> 渲染硬字幕, 软字幕指定两个输入文件后用 <code>-c copy</code></li><li><code>-ss xx:xx:xx -t 120</code> 剪出开始时间<code>xx:xx:xx</code>的后<code>120</code>秒, 到结尾用<code>-sseof</code></li><li><code>-f concat -i list.txt</code> 连接视频, 必须用list文件指定输入</li></ul><blockquote><p>一些例子</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i test.mkv -vf subtitles=test.srt output.mp4</span><br><span class="line">ffmpeg -i test.srt test.ass</span><br><span class="line">ffmpeg -i test.mp4 -i test.srt -c copy output.mkv</span><br><span class="line">ffmpeg -i img.jpg -q 75 out.jpg</span><br><span class="line">ffmpeg -i organ.mp3 -ss 00:00:xx -t 120 output.mp3</span><br><span class="line">ffmpeg -y -hwaccel cuda -i input.mp4 -c:a copy -c:v hevc_nvenc -b:v 5M output.mp4</span><br><span class="line">ffmpeg -hwaccel cuda -i 2.mp4 -c:a copy -c:v hevc_nvenc -r 25 -vf scale=1600:-1 out2.mp4</span><br><span class="line">ffmpeg -hwaccel cuda -i .\shana11.mkv -c:v mpeg4 -c:a aac -b:v 256k -b:a 64k -ar 44100 -vf scale=480x272,subtitles=shana11.ass -r 23.976 shana-psp-11.mp4 -y <span class="comment">#PSP</span></span><br><span class="line">ffmpeg -hwaccel cuda -f concat -i input.txt -c:v hevc out.mp4</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的mpv配置文件</title>
+    <link href="http://xwxstudio.com/mpv/"/>
+    <id>http://xwxstudio.com/mpv/</id>
+    <published>2023-02-05T16:38:32.000Z</published>
+    <updated>2023-05-24T16:39:24.773Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>主要来自<code>vcb</code>社区的推荐配置。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">script-opts=ytdl_hook-ytdl_path=yt-dlp</span><br><span class="line">script-opts-append=ytdl_hook-ytdl_path=yt-dlp</span><br><span class="line"></span><br><span class="line">gpu-context=d3d11</span><br><span class="line">hwdec=nvdec-copy</span><br><span class="line">d3d11-adapter=&quot;NVIDIA GeForce RTX 2050&quot;</span><br><span class="line">idle=yes</span><br><span class="line">#border=no</span><br><span class="line"></span><br><span class="line">alang=jpn,zh,chs,zh-Hans</span><br><span class="line">audio-file-auto=exact</span><br><span class="line">volume-max=100</span><br><span class="line">#audio-pitch-correction=no</span><br><span class="line"></span><br><span class="line">osd-on-seek=msg-bar</span><br><span class="line">osd-font=&quot;FZZhunYuan-M02&quot;</span><br><span class="line">osd-font-size=40</span><br><span class="line">osd-playing-msg=&quot;$&#123;filename&#125;&quot;</span><br><span class="line"></span><br><span class="line">profile=gpu-hq</span><br><span class="line">icc-profile-auto=yes</span><br><span class="line">blend-subtitles=video</span><br><span class="line">scale=ewa_lanczossharp</span><br><span class="line">video-sync=display-resample</span><br><span class="line">interpolation=yes</span><br><span class="line">tscale=oversample</span><br><span class="line">#video-aspect=1.9</span><br><span class="line"></span><br><span class="line">slang=chs,sc,zh,chi,zho,zh-Hans</span><br><span class="line">sub-auto=fuzzy</span><br><span class="line">sub-scale=0.8</span><br><span class="line">sub-font=&quot;FZZhunYuan-M02&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://xwxstudio.com/categories/life/"/>
+    
+    <category term="video" scheme="http://xwxstudio.com/categories/life/video/"/>
+    
+    
+    <category term="mpv" scheme="http://xwxstudio.com/tags/mpv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用yt-dlp和mpv浏览B站直播</title>
+    <link href="http://xwxstudio.com/ytdl/"/>
+    <id>http://xwxstudio.com/ytdl/</id>
+    <published>2022-11-09T14:06:44.000Z</published>
+    <updated>2023-06-04T07:05:16.641Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>用了<code>yt-dlp</code>和<code>mpv</code>，摆烂 + 快乐摸鱼！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$#</span> == 1 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;No Record!&quot;</span></span><br><span class="line">        mpv --referrer=<span class="string">&#x27;https://live.bilibili.com&#x27;</span> \</span><br><span class="line">            --autofit=1280 \</span><br><span class="line">            --script-opts=osc-visibility=never \</span><br><span class="line">            --ytdl-raw-options=format=<span class="string">&#x27;best[vcodec=avc]&#x27;</span> \</span><br><span class="line">            https://live.bilibili.com/<span class="variable">$1</span></span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$#</span> == 2 ] &amp;&amp; [ <span class="variable">$1</span> == <span class="string">&#x27;r&#x27;</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">time=$(<span class="built_in">date</span> <span class="string">&quot;+%m%d%H%M%S&quot;</span>)</span><br><span class="line">        filename=<span class="string">&quot;/home/xwx/Media/Live/bili-&quot;</span><span class="variable">$2</span><span class="string">&quot;-&quot;</span><span class="variable">$&#123;time&#125;</span><span class="string">&quot;.flv&quot;</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Record in ~/Media/Live/&quot;</span></span><br><span class="line">        mpv --referrer=<span class="string">&#x27;https://live.bilibili.com&#x27;</span> \</span><br><span class="line">            --autofit=1280 \</span><br><span class="line">            --script-opts=osc-visibility=never \</span><br><span class="line">            --ytdl-raw-options=format=<span class="string">&#x27;best[vcodec=avc]&#x27;</span> --stream-record=<span class="variable">$&#123;filename&#125;</span> \</span><br><span class="line">            https://live.bilibili.com/<span class="variable">$2</span> </span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$#</span> == 3 ] &amp;&amp; [ <span class="variable">$1</span> == <span class="string">&#x27;rn&#x27;</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">time=$(<span class="built_in">date</span> <span class="string">&quot;+%m%d%H%M%S&quot;</span>)</span><br><span class="line">        filename=<span class="string">&quot;/home/xwx/Media/Live/&quot;</span><span class="variable">$&#123;2&#125;</span><span class="string">&quot;-&quot;</span><span class="variable">$3</span><span class="string">&quot;-&quot;</span><span class="variable">$&#123;time&#125;</span><span class="string">&quot;.flv&quot;</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Record in ~/Media/Live/&quot;</span></span><br><span class="line">        mpv --referrer=<span class="string">&#x27;https://live.bilibili.com&#x27;</span> \</span><br><span class="line">            --autofit=1280 \</span><br><span class="line">            --script-opts=osc-visibility=never \</span><br><span class="line">            --ytdl-raw-options=format=<span class="string">&#x27;best[vcodec=avc]&#x27;</span> \</span><br><span class="line">            --stream-record=<span class="variable">$&#123;filename&#125;</span> \</span><br><span class="line">            https://live.bilibili.com/<span class="variable">$3</span> </span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$#</span> == 2 ] &amp;&amp; [ <span class="variable">$1</span> == <span class="string">&#x27;v&#x27;</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">        mpv --referrer=<span class="string">&#x27;https://www.bilibili.com&#x27;</span> \</span><br><span class="line">            https://www.bilibili.com/video/<span class="variable">$2</span></span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$#</span> == 3 ] &amp;&amp; [ <span class="variable">$1</span> == <span class="string">&#x27;vp&#x27;</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">prefix=<span class="string">&quot;https://www.bilibili.com/video/<span class="variable">$&#123;2&#125;</span>/?p=&quot;</span></span><br><span class="line">num=<span class="variable">$3</span></span><br><span class="line"><span class="built_in">sum</span>=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 1 <span class="variable">$&#123;num&#125;</span>`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="built_in">sum</span>=<span class="string">&quot;<span class="variable">$&#123;sum&#125;</span><span class="variable">$&#123;prefix&#125;</span><span class="variable">$&#123;i&#125;</span> &quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">        mpv --referrer=<span class="string">&#x27;https://www.bilibili.com&#x27;</span> <span class="variable">$&#123;sum&#125;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Wrong Arg!&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure><blockquote><p>例子<br>bili-live 593 # For Just Live<br>bili-live r 196 # For 自溜<br>bili-live rn Angel 255 # For Named 自溜<br>bili-live v BV1j4411W7F7 # For 别人的自溜<br>bili-live vp BV1MX4y1o7gJ 10 # For Multiple Parts 别人的自溜</p></blockquote><p>关注泠鸢yousa喵，关注泠鸢yousa谢谢喵！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="video" scheme="http://xwxstudio.com/categories/video/"/>
+    
+    <category term="tech" scheme="http://xwxstudio.com/categories/video/tech/"/>
+    
+    
+    <category term="mpv" scheme="http://xwxstudio.com/tags/mpv/"/>
+    
+    <category term="bilibili" scheme="http://xwxstudio.com/tags/bilibili/"/>
+    
+    <category term="yt-dlp" scheme="http://xwxstudio.com/tags/yt-dlp/"/>
+    
+    <category term="shell" scheme="http://xwxstudio.com/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub 代理</title>
+    <link href="http://xwxstudio.com/github-proxy/"/>
+    <id>http://xwxstudio.com/github-proxy/</id>
+    <published>2022-10-15T15:04:44.000Z</published>
+    <updated>2023-05-28T15:58:41.133Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:xxxx</span><br><span class="line">git config --global http.https://github.com.proxy http://127.0.0.1:xxxx</span><br></pre></td></tr></table></figure><p>不设会很难受，所以设了，嗯。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="tech" scheme="http://xwxstudio.com/categories/tech/"/>
+    
+    
+    <category term="Git" scheme="http://xwxstudio.com/tags/Git/"/>
+    
+    <category term="Github" scheme="http://xwxstudio.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网线很细但我很粗————Hanser一专！</title>
+    <link href="http://xwxstudio.com/hanser/"/>
+    <id>http://xwxstudio.com/hanser/</id>
+    <published>2022-09-07T16:14:39.000Z</published>
+    <updated>2023-05-24T16:39:24.773Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>终于收到了等待了一个月的专辑，忙忙碌碌的一天中刚有机会仔细地聆听这张专辑。即使小天使的专辑我是一定会支持的，但是当我看到这仿佛是我喜欢的人的大集合<code>Staff</code>的时候我还是一下子兴奋了起来，无论是<code>yunomi</code>和<code>40mP</code>这种大手还是憨憨的众多<code>好朋友</code>们，都是我在所谓<code>泛二次元</code>这样一个现在已经让我看不懂的圈子里面最初能让我心动的那一批人。由此，<code>Hanser</code>的这张首专让我在收到专辑之前就无比期待，作为鸟蛋，甚至比当时收到<code>yousa</code>的二专时都还要期待。</p><blockquote><p>二专是《折纸信笺》！</p></blockquote><p>如果说<code>yousa</code>是认真的女神<del>经</del>的话，憨色其实就像是我<del>从小看着长大</del>的大姐姐，亲切的声音，率真的性格，偶尔搞怪但是总是认真的处事，光听着讲话就很有意思，所以我从斗鱼以来——尽管那时候因为种种原因只能听录播，所以也没参加过活动，演唱会也没能去——就一直把Hanser当作陪伴电台来听的，草草回眸，竟已好多年（六年？<del>还算新粉吧</del>）。<code>小缘</code>十年，<code>yousa</code>二专，<code>Hanser</code>演唱会， 都是我想与同好们，或者说是我心中的那个向往着某些美好事物的那个我共度的时光，也不知是憨or鸟说过，这些重要节点不论是对于她们自己还是对于我们这些同好而言都是非常重要的时刻，能相聚在一起是偶然也是种必然。但是我宁愿做这美好流年的过客，因为我们这个时代好像一切都匆匆，<code>人</code>也好，<code>事</code>也好，但是<code>物</code>，却反常地越来越恒久，所以我今天抱着带着封条的专辑外壳，下意识地表现出了我未能料想到的依赖，因为在我心里，这就是我刚刚过去的这段已经悄无声息地流淌而过的时空的绝对坐标（工科生想不出词儿了）。</p><p>晚些，我终于拿着歌词本，完整地听了一遍专辑，看到鸟憨各自写了好几首，又在这些歌中找到了让我眼前一亮的歌。这些歌才听了一遍暂且放下不谈，听完回味时拿着歌词本想了想，回想起我现在的生活，很有感触，拿起键盘就写下了上面这一小段，算是笔记也好日记也罢，在此留档。最后，虽然跑题了，但是我还是想说，我庆幸我当初可以喜欢鸟，喜欢憨，喜欢毛哥，还有其他的可爱的朋友们，<del>尤其是一起唱过jbf的毛憨</del>。</p><p><img src="https://s2.loli.net/2022/09/08/IQ7SMzY3mdwFOK1.jpg" alt="IMG_20220907_231031"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://xwxstudio.com/categories/life/"/>
+    
+    <category term="note" scheme="http://xwxstudio.com/categories/life/note/"/>
+    
+    
+    <category term="note" scheme="http://xwxstudio.com/tags/note/"/>
+    
+    <category term="Hanser" scheme="http://xwxstudio.com/tags/Hanser/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>看完了《来自深渊》剧场版，我猛喝了一口矿泉水</title>
+    <link href="http://xwxstudio.com/Abyss/"/>
+    <id>http://xwxstudio.com/Abyss/</id>
+    <published>2022-08-04T16:24:08.000Z</published>
+    <updated>2023-05-24T16:39:24.773Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>从TV开始便一直有一种想法，主角团，尤其是<code>Riko</code>，带有一种与哈勃大叔和队长都不一样的孩童视角，这一点在其他的红笛身上也有体现，但是莉可是坚强的，所以她不光能面对他人的苦痛，也能毫不忌讳地直面自己的苦痛。</p><p>剧中不乏有挑战年龄限制的场景，但我都相信那是主角们在<code>Abyss</code>所真实遇到的，也能理解<code>Riko</code>在面临苦痛时的反应，这正是这种天真却决断，脆弱却坚韧特质的表现，也是动画告诉我们的，所谓的探窟家们在未知而又危险的深渊中能走下去的原因。</p><p>当然，正是这一种特质，使得故事可以发展下去，但这其实是次要的。重要的是，主角团的天真与决断让我们这些看这部动画的<code>半大人</code>，完全跟不上主角们的情感发展，一方面可以使得读者完全脱离主角的情感，完全以旁观者的角度去看待这件事，进而将视点转移到动画所描述的深渊上；另一方面也是在不断冲击着观众的心灵，使得<code>Abyss</code>的探知欲不会碍于对主角团的同情而藏匿在你我的心里。</p><p>但是这并不是说主角团人物形象就会因此刻画不好，他们只是与你我不像而已。以客观的视角，刻画了十分细节的感情，其中我最喜欢的，我想就是<code>Nanachi</code>对于<code>Miti</code>的情感了，尤其是<code>Regu</code>火葬炮送<code>Miti</code>的那个场景了。</p><p><code>Riko</code>从出生起就向往着<code>Abyss</code>；<code>Regu</code>则是出生于<code>Abyss</code>；<code>Nanachi</code>被<code>Abyss</code>夺走同伴，这个故事就是围绕着<code>Abyss</code>在展开的，有各色各样的人，还有甚至不是人的生物（特指<code>黎明卿</code>）在<code>Abyss</code>中的遭遇与选择，<code>Made in Abyss</code>，讲的就是<code>Abyss</code>的故事。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://xwxstudio.com/categories/life/"/>
+    
+    <category term="note" scheme="http://xwxstudio.com/categories/life/note/"/>
+    
+    
+    <category term="ACG" scheme="http://xwxstudio.com/tags/ACG/"/>
+    
+    <category term="Comment" scheme="http://xwxstudio.com/tags/Comment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用VLC实现同子网下的从Win到Android的视频分享及播放</title>
+    <link href="http://xwxstudio.com/VLC/"/>
+    <id>http://xwxstudio.com/VLC/</id>
+    <published>2022-04-07T02:12:00.000Z</published>
+    <updated>2023-05-24T16:39:24.773Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h1><p>最近厌烦了在阿B上看番的各种圣光和介质问题，进而转向下载补番党。但是，在电脑上下载完了之后，不能好好地躺在床上看，不然就要忍受现在电脑对手机的缓慢传输速度，或者是网盘的不可靠性。对于我这种<code>好事者</code>来说实在是难以忍受，因为宿舍里有路由器和校园网进线，所以我就想到了能不能用网络共享这种有点老的东西来实现，后来就想到了<code>SMB</code>，就有了这篇分享。</p><h1 id="电脑分享"><a href="#电脑分享" class="headerlink" title="电脑分享"></a>电脑分享</h1><p>如果是<code>Windows</code>的话，在<code>文件资源管理器</code>中找到你想要分享的文件夹按照<code>属性-共享-网络文件和文件夹共享-共享...</code>的方式打开共享设置界面，确认除了<code>Administrator</code>之外还有你自己的账号（一般是自己的微软账号），点击共享，就设置完毕了。</p><h1 id="手机看视频"><a href="#手机看视频" class="headerlink" title="手机看视频"></a>手机看视频</h1><ol><li>在<code>Google play</code>里面下载<code>VLC</code></li><li><code>VLC</code>中<code>浏览</code>界面下，一般过一会儿就探测到<code>共享</code>出现在<code>本地网络</code>里面了，可以加收藏</li><li>如果没有及时出现，可以尝试添加<ol><li>选择<code>SMB</code>协议</li><li><code>IP</code>在电脑<code>网络与Internet设置</code>中可以查看，路由器使用的网段一般是<code>192.168.x.x</code></li></ol></li></ol><h2 id="字幕"><a href="#字幕" class="headerlink" title="字幕"></a>字幕</h2><p>可以在播放界面找到字幕和音频的快速设置，所以即使是外挂字幕也可以用这个方法快乐共享。</p><h1 id="此外"><a href="#此外" class="headerlink" title="此外"></a>此外</h1><p><code>VLC</code>还可以看IP电视，这里分享一个仓库<a href="https://github.com/iptv-org/iptv">IPTV</a>，同时也可以直接<a href="https://github.com/search?q=iptv">GitHub搜索IPTV</a>。获得<code>m3u</code>和<code>m3u8</code>格式之后，使用任意平台的<code>VLC</code>或者<code>PotPlayer</code>均可以播放。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://xwxstudio.com/categories/life/"/>
+    
+    <category term="video" scheme="http://xwxstudio.com/categories/life/video/"/>
+    
+    
+    <category term="VLC" scheme="http://xwxstudio.com/tags/VLC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kindle配合Calibre的简单使用</title>
+    <link href="http://xwxstudio.com/kindle/"/>
+    <id>http://xwxstudio.com/kindle/</id>
+    <published>2022-02-25T15:58:50.000Z</published>
+    <updated>2023-04-01T13:20:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Calibre安装"><a href="#Calibre安装" class="headerlink" title="Calibre安装"></a>Calibre安装</h1><p>官网脚本自动安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -v &amp;&amp; wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin</span><br></pre></td></tr></table></figure><h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>接着上<a href="https://github.com/apprenticeharper/DeDRM_tools">GitHub</a>下载<code>DeDRM_plugin</code>，否则没法导出<code>kindle</code>商店买的电子书。</p><blockquote><p>此时记得先解压一次。</p></blockquote><p>在<code>Calibre</code>中，后面操作如下<code>首选项&gt;插件&gt;从文件加载插件</code>,选中<code>DeDRM_plugin.zip</code>,随后重启<code>Calibre</code>即可。</p><h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>接着需要将<code>Kindle</code>序列号输入插件的设置中,在<code>首选项&gt;插件</code>界面下,选择<code>自定义该插件</code>,选择<code>eInk Kindle ebooks</code>,按下”+”号,输入序列号（不需要空格）。</p><p>其中<code>Kindle序列号</code>在<code>设置&gt;设备信息</code>界面中可以找到。</p><h1 id="Kindle"><a href="#Kindle" class="headerlink" title="Kindle"></a>Kindle</h1><blockquote><p>版本为 Kindle Paperwhite（第十代）</p></blockquote><h1 id="从Kindle商店购买并加工为无加密的文件"><a href="#从Kindle商店购买并加工为无加密的文件" class="headerlink" title="从Kindle商店购买并加工为无加密的文件"></a>从Kindle商店购买并加工为无加密的文件</h1><p>搜索引擎搜索<code>Kindle商店</code>，在我的账户下拉菜单里找到<code>管理我的内容与设备</code>，在此页面可以下载加密后的文件。<br>下面看到<code>Calibre</code>，将文件添加书籍后，进行转换书籍至需要的格式，DeDRM便会自动运行，得到非加密的文件。</p><blockquote><p>当然你也可以在类似<a href="https://singlelogin.me/">z-library</a>之类的找到想要的文档。<br><del>当然现在想用 <code>z-library</code> 可以去了解一下 <a href="https://www.torproject.org/">Tor</a>。</del></p></blockquote><h1 id="网络电子书传进Kindle"><a href="#网络电子书传进Kindle" class="headerlink" title="网络电子书传进Kindle"></a>网络电子书传进Kindle</h1><p>添加书籍，传输进去即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="life" scheme="http://xwxstudio.com/categories/life/"/>
+    
+    <category term="read" scheme="http://xwxstudio.com/categories/life/read/"/>
+    
+    
+    <category term="Kindle" scheme="http://xwxstudio.com/tags/Kindle/"/>
+    
+    <category term="电纸书" scheme="http://xwxstudio.com/tags/%E7%94%B5%E7%BA%B8%E4%B9%A6/"/>
+    
+    <category term="阅读" scheme="http://xwxstudio.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git笔记</title>
+    <link href="http://xwxstudio.com/Git/"/>
+    <id>http://xwxstudio.com/Git/</id>
+    <published>2022-02-09T13:37:07.000Z</published>
+    <updated>2023-05-28T15:58:41.133Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>由于我用的是manjaro，所以就直接<code>yay</code>了。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -Sy git</span><br></pre></td></tr></table></figure><p><a href="http://git-scm.com/downloads">其他系统下载</a></p><blockquote><p>如果是<code>Win</code>系统可以安装后右键打开<code>Git GUI</code>（</p></blockquote><h2 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h2><ul><li>首先是报上名来。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;whoami&quot;</span></span><br><span class="line">git config --global user.email myemail@example.com</span><br></pre></td></tr></table></figure><p>如果不放心是否成功可以查一下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure><ul><li>接着就初始化本地仓库</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add --all</span><br><span class="line">git commit -m <span class="string">&#x27;init&#x27;</span></span><br></pre></td></tr></table></figure><ul><li>然后是加公钥</li></ul><p>先是自己机子生成一下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;myemail@example.com&quot;</span></span><br></pre></td></tr></table></figure><p>现在<code>～/.ssh/id_rsa.pub</code>里面已经出现了公钥，全部复制即可。</p><p>再是加入到Github上的设置里</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">个人主页&gt;头像右边的小三角&gt;Settings&gt;SSH and GPG keys&gt;New ssh key</span><br></pre></td></tr></table></figure><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><ol><li>添加远程仓库</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:username/repo.git</span><br></pre></td></tr></table></figure><ol start="2"><li>克隆仓库</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:username/repo.git</span><br></pre></td></tr></table></figure><ol start="3"><li>从远程仓库获取分支</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin</span><br></pre></td></tr></table></figure><ol start="4"><li>合并分支</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge origin/master</span><br></pre></td></tr></table></figure><ol start="5"><li>下载远程代码并合并</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;(:&lt;本地分支名&gt;)</span><br></pre></td></tr></table></figure><ol start="6"><li>上传本地代码并合并</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt;(:&lt;远程分支名&gt;)</span><br></pre></td></tr></table></figure><ol start="7"><li>分支管理</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VSCode</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="tech" scheme="http://xwxstudio.com/categories/tech/"/>
+    
+    
+    <category term="Git" scheme="http://xwxstudio.com/tags/Git/"/>
+    
+    <category term="Github" scheme="http://xwxstudio.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft服务器(ListAndBak)</title>
+    <link href="http://xwxstudio.com/MC/"/>
+    <id>http://xwxstudio.com/MC/</id>
+    <published>2022-02-02T01:54:20.000Z</published>
+    <updated>2023-06-02T02:48:31.491Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="b5455c0cc879090b11a85e0ac4ab4982ff8cb48a7618cc0771a3ec406904e6eb">4d12e5ce38fe85588d8c80e0a09e07aaeea01f19d27895f5018fa5b30d7852701eff8b3da68bf55e81e335c731885221ea9c981718198560bc8a995484e719bce3c6e6faf7fb93573df38a4e7e2f567329c0d38f573c30efaeae6bb388123152b0778cf4377ee565f24d9f04918f0708ebf168660bc078020cd5b05db39d76a3cf30ee00b90d98e8262057e2298f0e242eee3ef5ae73f57daeb7d26322cff33960414f22952a42b08d79c8c279e75a71b47f505f1ccc8cb6b8e4e6a91317da9cc2fd6cec288fbe5c17e41de52931dbcda7befd284f943e4f6c68c272f553086e0db6466a04b6ca6e965aa183d7caea75b7b3b608a257868a3d59cb4178fec7e5aacb037d454e6c75c26cc32f0d8e53fcb27aa3fcfd350d053e7a53553d625761777bc845ecf8ea45a24229dcbfd4481a4cb78f897008700cb89c970f560835b359ccbec74e77381f60c4346a5d7d20e460a89f1c814b22dc0399cced228650af38cc21649f867ac1c93d0d067928cd186f658826018535de1f1d8a6579c7189ecef725d525be12009fce49cdc1c2cbab77b9700abfd85008b4076371402e3ce1854796ce52db1169248f0bbe5648db56fe0382b19d2b5a967903e2fb3eb45a3506f11212137f283435b772215b4f4c639cd9dbd7e8f4eac37d8769229ab251a5b73791e41fba77669abb9f39757946489ff4fe39ae4ddcee4f74322bb4151c0c1af0edc6b84fd62f3cf65de678790d5ce7fcf67aea666fe628766a152de5d686a623eb6b9448c210450d73d5cde15e38c6c4e3b80a25750f84313107f1c20f1dca61d5e70ca0c984d96e30cc2cdef8bb8bc66160d1182ff20911a97644beeea81e1cb4236ff6b84f82577bf14b7006fc2f8b97f565ee82680685de38a2ef69a0e5f4a4ce406e0b350758e11d5868522a51aac2f69310453f284dbd8d301528ea35e8d241c066a357bafb27af8956bf5a2c991bc4ff7bee4110604814ed08a3083f0b78460a1a5fb7594dfee8c39d15c4c709f2363aeb63426c03b5ee86b7456ece7fe885e8b8072eccb16eb72002377a28620ac86e4855bf3b9e92ce2bd484cb325a31ae5f032894322008a6bd804b5b79954061335328a4e81036ee5a437f717491d8fea26ff274afaceffb37e46b3b6d036daf5d358b0dc4b6171d249b5a9b3f2c0f11c1eb039b4b248885d2f8ba8e4fd1dcb5e10dbb42df92b7453d45024928e948993bbd91a8bdf34a58247492cf403957dc344086659bb12b3e197e55fff86da84361a41671d4afaafaa992c78e873d35f7d0919d3fe597fdd3e4aa52f5fc03d5d9dc00598bcd5958a501c04e77fa94a2a6fdeb11dc666d55975fc94bf5a7a3e5e89985dd1c443c6c38ba9de8fb5ceb75efd9eb1159718af94fc0ead11b9a936ea3ea6acce3ca5c9c1d74efbc2329c5963d89d7d994b4b5274f66dba9eacc9e457d756c2b36afa969972c2e42649a0c78d1601db1717df35bcc02b79f941411f938e13def8a2d77cc9d019d6b7cdfb305ecc306113002e615637baf5369b1597375e575b835ca5b67b2bda62759789de282cbf825ea0ece5112c30cebfa27bc5e4bf535548e7c6b50da1d5621a11b4728591b2a98a12c3e1d671a27fce37d4e30157505ab4c392c6ae47e3f551f147b357dfb39a9873101c6cc10d2192c4674a9bd3584794efc9b73fd1eedfa0d3388968b9be451ff16dc607ec92e92bb22208661e91d99429147621ced49ea0263e9b937e86055fe8e3e5d8e7e5967a79aba61306e989afa11a1cf4a92ac09bbb05d6e0dda72f3f326cae6bb40d6cdf46483181187e9e997811760f616eabb00ac3bac02c8c280de98be0975b404fc5b7881f6e1568ba5693138fe230f9be17ed6f74b07045fb3b1c7831d88c6019f646512055ee4d46d6f3e2452aab53ea1e562066cbb03192f681cc0663991b7d71d3c5105f2ead2b989fb687dcedd865992e9d49fd987b141c0703f36e42a3be835117bbf224bca61ab47b366e35d0b70bc1c488c58f3fd2d6d42008473eed8ebd624769ada696addd6d81060aecb21ab2d76856bd03fb4210c91a5bcc972aa66e25f265e07ffde5ee7b64960508dad1f34bb00b61ab634cb82b0efef4641b4168366172f0f0eef5f4416d5fa2c257145707f715d8164bdc6fc421cfdd64c90ccfa2370b775eb1ae38a2419f11904b28171ef9552a0d8408f7ce8f823ee654ff1748037180ffab678a2d85f90aa08048d96128ebe6c7ec55731022eabea8a8253881fac7208db0c1325ed819e4a6ba291c48ef005e1c56733bcc95b94ba1f21a438699245bfe9d2c05270a680896beb1cbe3d96c9000e2c0ce1c14a231a517fb5f6ffa360f89f7823a2d9426526d2c24fec5d991d19a45d9dcbd4d51b2253b099855de87f2a74cc6f243f32bdfd922d863b0447a1a8017b715dffac640f031fe4d0726b45c8aca8383bae744fad0902c1ffccfd6ac729c1892fae2ca500d46b8d9bbe2175f01a57124cbe168f4a40702d28862f963befc3f60d775b142ede4776abf0ccd0cf3f0eb78cf17b2a42bf0a0c14e1350d255574e5a66466cb0257663feb95d3c8bac81b0af1d91e3fb7047d66d1014848346336ca58123794f9bd5b31507f0e0c0bc990055bef7d7ac00310856dc2e2b9e74c13b97595b78f9d5b3c95d0d726e35a82eed30b4d4a7f688950d1fbc5c1f7f49e9b2e690f0f7f62e14de71e6e55d6c6100f6fba596e1dd97921e2ddcb5fe5a334a06f21df452a3676dfa9d206e8ee744e1687ee09aae05e5ab803a89afdef8e3cae507601cbe61e1c3eea6981df8a039073f7757145f48c1534002d17247f1a539820de10c6cf41ea2edc0b80191f83e9919e18964b75b3174e4545a3dc843220366912412f785a5859f9d906712324a33f7ee9992f91d0def3237bc122452bd4d2d8fcbc9d813a840786491a8dcf00a7bdfa8d5c4d2ff8a42bf9b1fcfb9f2f87be8430767e0519288bf15ae27720b070944593db4a9358870bb256b856bc2858bc01d8bbe0c355f0038be8a840d04f2e824b2f92eb57d06d73dcc7b6fdb4d02252ee73cd220405f9dcab5a1e4299656e4d75c65d2123547b6669aaf3c9aaaf56848789066c55da24eacefa408f1e44b4e5f808a3165e5f0da27e3cfd3ea1386d0ef25388642f08d812ac716cc81d84c4cbf63db552f538042a6ed1b5393c095b4ee3f0e7e11622bb166ad7532ff13b4636b4ec971c19e238819ff773cf6eee6eb7d45e271862a685b110d861d153e079ecb36f15d179717cd9af93</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">我的Minecraft正版玩家名是？</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">我的Minecraft正版玩家名是？</summary>
+    
+    
+    
+    
+    <category term="Games" scheme="http://xwxstudio.com/tags/Games/"/>
+    
+    <category term="Minecraft" scheme="http://xwxstudio.com/tags/Minecraft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录利用docker开设Hexo框架简单博客</title>
+    <link href="http://xwxstudio.com/Hexo/"/>
+    <id>http://xwxstudio.com/Hexo/</id>
+    <published>2022-02-01T14:00:00.000Z</published>
+    <updated>2023-04-01T13:20:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h2><ul><li>系统：<strong>Ubuntu</strong></li><li>使用域名：<strong>xwxstudio.com</strong></li></ul><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><h3 id="从NodeSource安装"><a href="#从NodeSource安装" class="headerlink" title="从NodeSource安装"></a>从<a href="https://github.com/nodesource/distributions#debinstall">NodeSource</a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br></pre></td></tr></table></figure><p>或者<code>yay -Sy nodejs</code></p><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="官方文档的npm安装。"><a href="#官方文档的npm安装。" class="headerlink" title="官方文档的npm安装。"></a>官方文档的npm安装。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</span><br></pre></td></tr></table></figure><p>或者<code>yay -Sy npm</code></p><h3 id="在Node背景下的Hexo安装。"><a href="#在Node背景下的Hexo安装。" class="headerlink" title="在Node背景下的Hexo安装。"></a>在Node背景下的Hexo安装。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line"><span class="comment">#初始化文件夹</span></span><br><span class="line">hexo init .</span><br><span class="line">npm install</span><br><span class="line"><span class="comment">#在4000端口开放服务</span></span><br><span class="line">hexo server</span><br><span class="line"><span class="comment">#指定端口使用参数 -p</span></span><br></pre></td></tr></table></figure><h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h2><h3 id="使用官方安装脚本自动安装。"><a href="#使用官方安装脚本自动安装。" class="headerlink" title="使用官方安装脚本自动安装。"></a>使用官方安装脚本自动安装。</h3><p>从阿里云用<strong>cURL</strong>安装：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure><p>关于<strong>docker-compose</strong>的安装可以参考<a href="https://www.runoob.com/docker/docker-compose.html">菜鸟教程</a>。</p><p>或者<code>yay -Sy docker docker-compose</code></p><h1 id="Hexo配置"><a href="#Hexo配置" class="headerlink" title="Hexo配置"></a>Hexo配置</h1><h2 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure><blockquote><p><code>_config.yml</code>：<code>Hexo</code>的配置文件<br><code>themes</code>：放主题文件的文件夹<br><code>source/_drafts</code>：放草稿的文件夹<br><code>source/_posts</code>：放帖子的文件夹</p></blockquote><h2 id="基本信息配置"><a href="#基本信息配置" class="headerlink" title="基本信息配置"></a>基本信息配置</h2><p>详见<a href="https://hexo.io/zh-cn/docs/configuration">Hexo配置</a></p><h1 id="Docker配置"><a href="#Docker配置" class="headerlink" title="Docker配置"></a>Docker配置</h1><h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><h3 id="hexo镜像"><a href="#hexo镜像" class="headerlink" title="hexo镜像"></a>hexo镜像</h3><ul><li>仅仅作Hexo模板的初始化</li></ul><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> XwX</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /hexo</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> npm install hexo-cli -g\</span></span><br><span class="line"><span class="language-bash">&amp;&amp; hexo init .\</span></span><br><span class="line"><span class="language-bash">&amp;&amp; npm install</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">4000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;/bin/bash&quot;</span>]</span></span><br></pre></td></tr></table></figure><ul><li>运行<code>docker build -t &#39;hexo&#39; .</code></li></ul><h3 id="blog镜像"><a href="#blog镜像" class="headerlink" title="blog镜像"></a>blog镜像</h3><ul><li>生成具体博客镜像</li></ul><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> hexo:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> name &lt;mail&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /hexo</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">4000</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;/usr/bin/env&quot;</span>,<span class="string">&quot;hexo&quot;</span>,<span class="string">&quot;server&quot;</span>]</span></span><br></pre></td></tr></table></figure><ul><li>运行<code>docker build -t  &#39;blog&#39;  . </code></li></ul><h2 id="docker-compose-yml"><a href="#docker-compose-yml" class="headerlink" title="docker-compose.yml"></a>docker-compose.yml</h2><ul><li>在具体文件夹创建容器</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">blog:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">build:</span></span><br><span class="line">      <span class="attr">context:</span> <span class="string">.</span></span><br><span class="line">      <span class="attr">dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&#x27;blog&#x27;</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hexo-blog</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;80:4000&quot;</span></span><br><span class="line">      <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">$HOME/.ssh:/root/.ssh</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">.:/hexo</span></span><br></pre></td></tr></table></figure><ul><li><p>开启容器：<code>docker-compose up -d</code></p></li><li><p>关闭容器：<code>docker-compose down</code></p></li></ul><h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><ul><li>直接对宿主机文件进行操作即可实现hexo博客的创建，配置与写作。</li></ul><h2 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h2><ul><li>直接使用<code>Git</code>对本地和云端的数据进行版本管理。</li><li>可以使用<code>VScode</code>进行<code>Git</code>的pull和push操作。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="tech" scheme="http://xwxstudio.com/categories/tech/"/>
+    
+    
+    <category term="Hexo" scheme="http://xwxstudio.com/tags/Hexo/"/>
+    
+    <category term="Docker" scheme="http://xwxstudio.com/tags/Docker/"/>
+    
+    <category term="Blog" scheme="http://xwxstudio.com/tags/Blog/"/>
+    
+  </entry>
+  
+</feed>
