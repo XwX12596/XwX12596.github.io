@@ -91,16 +91,16 @@
           <a href="/shuoshuo/">一言</a>
         </li>
       
-        <li class="nav-item" data-path="/sakana/">
-          <a href="/sakana/">🐟</a>
-        </li>
-      
         <li class="nav-item" data-path="/media/">
           <a href="/media/">媒体</a>
         </li>
       
         <li class="nav-item" data-path="/bangumi/">
           <a href="/bangumi/">新番</a>
+        </li>
+      
+        <li class="nav-item" data-path="/sakana/">
+          <a href="/sakana/">工具</a>
         </li>
       
         <li class="nav-item" data-path="/link/">
@@ -164,9 +164,33 @@
   <!-- 关于页 url形式：https://yoursite/about/ -->
     <div class="container about-index">
       <div class="markdown-body">
-        <br>
-<div id="sakana-widget1" style = "float:left;"></div>
-<div id="sakana-widget2" style = "float:right;"></div>
+        <h2 id="MC-Monitor"><a href="#MC-Monitor" class="headerlink" title="MC Monitor"></a>MC Monitor</h2><html>
+<style>
+.row{
+    width:100%;
+    height:auto;
+    display:flex;
+}
+.elem{
+    flex:1;
+}
+</style>
+<p>
+    Status: <b><span id = 'stat'>Requesting...</span></b>
+    <br>
+    Players: <b><span id = 'players'>*</span></b>
+    <br>
+    List: <b><span id = 'names'>*</span></b>
+    <br>
+    MOTD: <b><span id = 'motd'>*</span></b>
+</p>
+<br>
+<div class="row">
+    <div id="sakana-widget1" class="elem" style = "align:left"></div>
+    <div class="elem"></div>
+    <div id="sakana-widget2" class="elem" style = "align:right"></div>
+</div>
+
 <script>
     function initSakanaWidget() {
         const takina = SakanaWidget.getCharacter('takina');
@@ -177,6 +201,10 @@
 </script>
 <script async onload="initSakanaWidget()"
     src="https://cdn.jsdelivr.net/npm/sakana-widget@2.2.1/lib/sakana.min.js"></script>
+
+<script src="/sakana/js/mycounter.js"></script>
+</html>
+
       </div>
     </div>
   
