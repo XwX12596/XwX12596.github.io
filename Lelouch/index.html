@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/6 
+      All Hail Lelouch! 
       
       
       |
@@ -121,147 +121,140 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">All Hail Lelouch!</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-11-01 00:58:43
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <ul>
+<li><del><strong>被强加的善意，与恶意无二！</strong></del></li>
+<li><del><strong>开枪之人，也要有被枪指着的觉悟！</strong></del></li>
+<li><del><strong>所有的仇恨都将集中在这里！</strong></del></li>
+<li><del><strong>娜娜莉, 你已经在靠自己的意志活着, 所以我也能走自己的路。</strong></del></li>
+<li><strong>我将世界毁灭，随后世界将创造！！！</strong></li>
+<li><strong>我将世界毁灭，随后世界将创造！！！</strong></li>
+<li><strong>我将世界毁灭，随后世界将创造！！！</strong></li>
+</ul>
+<!-- <h2 align="center"> -->
+<!--     <p>ナナリー、お前はもう、立派に自分の考えるで生きている。</p> -->
+<!--     <p>だからこそ、俺も、俺の道をすすむことができる。</p> -->
+<!-- </h2> -->
+<!-- <h4 align="right" > -->
+<!--         <p>————Lelouch</p> -->
+<!-- </h4> -->
+
+<!-- > *娜娜莉, 你已经在靠自己的意志活着, 所以我也能走自己的路* -->
+<!-- > ナナリー、お前はもう、立派に自分の考えるで生きている。だからこそ、俺も、俺の道をすすむことができる。 -->
+<!-- ありがとう。愛してる、ナナリー。 -->
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/liver/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-11-01 00:58:43
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="All Hail Lelouch!">
-        <div class="time-m-d">11-01</div>
-        <div class="title">
-          <a href="/Lelouch/">
-            <span>All Hail Lelouch!</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="看V的人是这样的">
-        <div class="time-m-d">06-15</div>
-        <div class="title">
-          <a href="/liver/">
-            <span>看V的人是这样的</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="FFmpeg 笔记">
-        <div class="time-m-d">05-28</div>
-        <div class="title">
-          <a href="/FFmpeg/">
-            <span>FFmpeg 笔记</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="我的mpv配置文件">
-        <div class="time-m-d">02-06</div>
-        <div class="title">
-          <a href="/mpv/">
-            <span>我的mpv配置文件</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="使用yt-dlp和mpv浏览B站直播">
-        <div class="time-m-d">11-09</div>
-        <div class="title">
-          <a href="/ytdl/">
-            <span>使用yt-dlp和mpv浏览B站直播</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="GitHub 代理">
-        <div class="time-m-d">10-15</div>
-        <div class="title">
-          <a href="/github-proxy/">
-            <span>GitHub 代理</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="网线很细但我很粗————Hanser一专！">
-        <div class="time-m-d">09-08</div>
-        <div class="title">
-          <a href="/hanser/">
-            <span>网线很细但我很粗————Hanser一专！</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="看完了《来自深渊》剧场版，我猛喝了一口矿泉水">
-        <div class="time-m-d">08-05</div>
-        <div class="title">
-          <a href="/Abyss/">
-            <span>看完了《来自深渊》剧场版，我猛喝了一口矿泉水</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="用VLC实现同子网下的从Win到Android的视频分享及播放">
-        <div class="time-m-d">04-07</div>
-        <div class="title">
-          <a href="/VLC/">
-            <span>用VLC实现同子网下的从Win到Android的视频分享及播放</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Kindle配合Calibre的简单使用">
-        <div class="time-m-d">02-25</div>
-        <div class="title">
-          <a href="/kindle/">
-            <span>Kindle配合Calibre的简单使用</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Git笔记">
-        <div class="time-m-d">02-09</div>
-        <div class="title">
-          <a href="/Git/">
-            <span>Git笔记</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Minecraft服务器(ListAndBak)">
-        <div class="time-m-d">02-02</div>
-        <div class="title">
-          <a href="/MC/">
-            <span>Minecraft服务器(ListAndBak)</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="记录利用docker开设Hexo框架简单博客">
-        <div class="time-m-d">02-01</div>
-        <div class="title">
-          <a href="/Hexo/">
-            <span>记录利用docker开设Hexo框架简单博客</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src='https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js' onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'YBH7dy8YlNz0JsvUT2vw1rVn-MdYXbMMI',
+        appKey: 'Q7qAfgOW7OkXlWMWf62B4lb2',
+        placeholder: 'WhatEver!',
+        avatar: 'retro',
+        lang: 'zh-CN'
+      })
+    }
+  </script>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -541,6 +534,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + All%20Hail%20Lelouch! + '&url=' + http%3A%2F%2Fxwxstudio.com%2FLelouch%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://xwxstudio.com/Lelouch/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
