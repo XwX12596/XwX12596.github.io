@@ -6,7 +6,7 @@
   <link href="http://xwxstudio.com/atom.xml" rel="self"/>
   
   <link href="http://xwxstudio.com/"/>
-  <updated>2025-11-04T03:44:11.711Z</updated>
+  <updated>2025-11-30T06:21:18.144Z</updated>
   <id>http://xwxstudio.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://xwxstudio.com/beamer/"/>
     <id>http://xwxstudio.com/beamer/</id>
     <published>2023-12-31T17:07:15.000Z</published>
-    <updated>2025-11-04T03:44:11.711Z</updated>
+    <updated>2025-11-30T06:21:18.144Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Beamer"><a href="#Beamer" class="headerlink" title="Beamer"></a>Beamer</h1><blockquote><p>想记一下<code>Beamer</code>里我比较喜欢的几个写法；当然明天再写就是了。。。</p></blockquote>]]></content>
     
